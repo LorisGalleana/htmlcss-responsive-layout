@@ -1,5 +1,32 @@
+/* 
+PALETTE:
+Azure: rgb(0, 132, 253)
+Uranian Blue: rgb(181, 221, 255)
+Tropical indigo: rgb(151, 146, 228)
+Melon: rgb(234, 164, 141)
+*/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.upper-bar {
+    background-color: rgb(0, 132, 253);
+    height: 100px;
+    margin-bottom: 50px;
+    position: fixed;
+}
+.upper-bar .container {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.upper-bar .fa-bars {
+    color: white;
+    font-size: 36px;
 }
