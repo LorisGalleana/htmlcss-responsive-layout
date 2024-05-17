@@ -5,8 +5,15 @@ Uranian Blue: rgb(181, 221, 255)
 Tropical indigo: rgb(151, 146, 228)
 Melon: rgb(234, 164, 141)
 Payne's gray: rgb(90, 110, 127)
+Xanthous: rgb(253, 193, 95)
 */
-
+:root {
+    --upper-bg-color: rgb(0, 132, 253);
+    --demo-color-card: rgb(181, 221, 255);
+    --secondary-color: rgb(151, 146, 228);
+    --width-container-limiter: 90%;
+    --center-margin: 0 auto;
+}
 * {
     margin: 0;
     padding: 0;
@@ -19,16 +26,16 @@ Payne's gray: rgb(90, 110, 127)
                                      UPPER BAR   
 ******************************************************************************************/
 .upper-bar {
-    background-color: rgb(0, 132, 253);
+    background-color: var(--upper-bg-color);
     width: 100%;
     height: 100px;
     position: fixed;
     z-index: 2;
 }
 .upper-bar .container {
-    width: 90%;
+    width: var(--width-container-limiter);
     height: 100%;
-    margin: 0 auto;
+    margin: var(--center-margin);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,6 +43,7 @@ Payne's gray: rgb(90, 110, 127)
 .upper-bar .fa-bars {
     color: white;
     font-size: 36px;
+    z-index: 2;
 }
 
 /***************************************************************************************** 
@@ -45,13 +53,13 @@ Payne's gray: rgb(90, 110, 127)
     padding-top: 150px;
     width: 100%;
 }
-.demo-section .container, .card-container, .planning-section .container, .testimonials {
-    width: 90%;
-    margin: 0 auto;
+.demo-section .container, .card-container, .planning-section .container, .testimonials, .text-card-container, .benefit-section .container, .benefit-card .container, .about-us, .get-started .container {
+    width: var(--width-container-limiter);
+    margin: var(--center-margin);
 }
 
 .demo-section .card {
-    background-color: rgb(181, 221, 255);
+    background-color: var(--demo-color-card);
     margin-bottom: 20px;
     border-radius: 24px;
     text-align: center;
@@ -91,16 +99,16 @@ Payne's gray: rgb(90, 110, 127)
     margin-top: 15%;
 }
 .card-container img {
-    width: 90%;
+    width: var(--width-container-limiter);
     vertical-align: bottom;
     margin: 15% 5% 0;
 }
 /***************************************************************************************** 
                                      PLANNING   
 ******************************************************************************************/
-.planning-section {
+.planning-section, .benefit-section, .get-started {
     width: 100%;
-    background-color: rgb(151, 146, 228);
+    background-color: var(--secondary-color);
     margin-top: 20%;
     padding-bottom: 15%;
 }
@@ -119,8 +127,8 @@ Payne's gray: rgb(90, 110, 127)
     line-height: 180%;
 }
 .appdev-box {
-    width: 90%;
-    margin: 0 auto;
+    width: var(--width-container-limiter);
+    margin: var(--center-margin);
     background-color: white;
     border-radius: 50px;
     text-align: center;
@@ -134,7 +142,7 @@ Payne's gray: rgb(90, 110, 127)
     font-style: italic;
 }
 .appdev-box .fa-arrow-down {
-    background-color: rgb(151, 146, 228);
+    background-color: var(--secondary-color);
     padding: 20px;
     border-radius: 100%;
     margin: 10% 0;
@@ -154,7 +162,7 @@ Payne's gray: rgb(90, 110, 127)
     margin: 15% 0 5%;
 }
 .testimonials h1 {
-    color: rgb(151, 146, 228);
+    color: var(--secondary-color);
     font-weight: bold;
     font-size: 40px;
 }
@@ -162,13 +170,9 @@ Payne's gray: rgb(90, 110, 127)
     margin: 10% 0%;
     line-height: 180%;
 }
-.text-card-container {
-    width: 90%;
-    margin: 0 auto;
-}
 .testimonials .test-card {
-    width: 90%;
-    background-color: rgb(151, 146, 228);
+    width: var(--width-container-limiter);
+    background-color:var(--secondary-color) ;
     border-radius: 40px;
     margin-bottom: 10%;
 }
@@ -192,30 +196,143 @@ Payne's gray: rgb(90, 110, 127)
     padding-bottom: 10%;
     margin: 5% 0;
 }
-
-
 /***************************************************************************************** 
                                      BENEFITS   
 ******************************************************************************************/
-
-
-
-
-
+.benefit-section .benefit-card {
+    width: var(--width-container-limiter);
+    background-color: white;
+    color: var(--secondary-color);
+    border-radius: 20px;
+    margin: var(--center-margin);
+    padding-bottom: 10%;
+    margin-bottom: 10%;
+}
+.benefit-section h2:not(.benefit-card h2) {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+.benefit-section h2 {
+    font-size: 52px;
+    padding: 10% 0;
+    font-weight: bold;
+}
+.benefit-section h3 {
+    font-weight: bold;
+    font-size: 24px;
+}
+.benefit-card p {
+    padding: 10% 0;
+    line-height: 180%;
+    color: gray;
+}
+.benefit-card .see-more {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 8px 16px;
+    width: 50%;
+    text-align: center;
+    border-radius: 16px;
+}
 /***************************************************************************************** 
                                      ABOUT US   
 ******************************************************************************************/
-
-
-
-
-
+.about-us {
+    padding: 20% 0;
+}
+.about-us h2 {
+    font-size: 40px;
+    margin-bottom: 10%;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+.about-us h3 {
+    color: var(--secondary-color);
+    font-weight: bolder;
+    font-size: 36px;
+    margin-bottom: 10%;
+}
+.about-us p {
+    line-height: 210%;
+    margin-bottom: 15%;
+}
+.about-us .photo {
+    width: 60%;
+    position: relative;
+    margin: 10% 0
+}
+.photo img {
+    width: 100%;
+    border-radius: 50%;
+}
+.photo .fa-quote-left {
+    position: absolute;
+    font-size: 60px;
+    right: 6%;
+    color: var(--secondary-color);
+}
+.about-us a {
+    text-decoration: none;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 32px;
+    text-align: center;
+}
+a .fa-linkedin {
+    margin-right: 3%;
+}
 /***************************************************************************************** 
                                      GET STARTED   
 ******************************************************************************************/
-
-
-
+.get-started {
+    color: white;
+    text-align: center;
+}
+.get-started h4 {
+    color: lightgray;
+    font-size: 24px;
+    padding: 10% 0 5%;
+    
+}
+.get-started h3 {
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+}
+.get-started h2 {
+    color: rgb(253, 193, 95);
+    font-size: 80px;
+    font-weight: bold;
+    margin: 10% 0;
+}
+.get-started p {
+    font-size: 21px;
+    margin-bottom: 10%;
+}
+.get-started a:not(.copyright a) {
+    background-color: white;
+    color: var(--secondary-color);
+    padding: 20px 70px;
+    text-decoration: none;
+    margin: 10% 0;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 4px;
+    border-radius: 40px;
+}
+.get-started .copyright {
+    font-size: 19px;
+    margin: 15% 0;
+}
+.copyright a {
+    color: white;
+}
+.copyright .fa-circle {
+    font-size: 5px;
+    vertical-align: middle;
+}
 
 
 
