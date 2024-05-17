@@ -63,7 +63,7 @@ Jet: rgb(51, 51, 51)
     background-color: var(--demo-color-card);
     margin-bottom: 20px;
     border-radius: 24px;
-    text-align: center;
+    text-align: center;    
 }
 .demo-section .card.big {
     text-align: left;
@@ -88,8 +88,7 @@ Jet: rgb(51, 51, 51)
     border-radius: 36px;
     font-weight: bold;
     font-size: 18px;
-    letter-spacing: 4px;
-    
+    letter-spacing: 4px;  
 }
 .card .fa-apple {
     padding-right: 2%;
@@ -353,4 +352,157 @@ footer p {
 }
 footer a {
     color: var(--secondary-color);
+}
+
+
+/***************************************************************************************** 
+                                     LAYOUT  
+******************************************************************************************/
+@media screen and (min-width: 500px) {
+    .card-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .demo-section .container {
+        display:flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .demo-section .card {
+        width: calc(100%/3 - 20px);
+    }
+    .demo-section .card.big {
+        width: calc((100%/3)*2 - 20px);
+    }
+    .card h1 {
+        padding: 5% 0;
+    }
+    .card p {
+        padding-bottom: 5%;
+    }
+    .card a {
+        padding: 16px;
+        text-align: center;
+        width: 50%;
+    }
+    .card-container img {
+        width: 60%;
+        vertical-align: bottom;
+        margin: 5% 0 0;
+    }
+    .planning-section {
+        margin-top: 5%;
+        padding-bottom: 5%;
+    }
+    .planning-section img {
+        padding: 10% 0;
+    }
+    .planning-section .container h1 {
+        padding-bottom: 5%;
+        font-size: 80px;
+    }
+    .planning-section .container p {
+        padding-bottom: 3%;
+        font-size: 20px;
+    }
+    .appdev-box img {
+        padding: 5% 0;
+        width: 70%;
+    }
+    .appdev-box p {
+        font-size: 24px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .appdev-box .fa-arrow-down {
+        margin: 5% 0;
+    }
+    .testimonials .test-card {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 3%;
+    }
+    .text-card-container {
+        display: flex;
+        margin: 0;
+    }
+    .text-container {
+        text-align: left;
+    }
+    .test-card img {
+        margin: 3% -2% 6%;
+        width: 40%;
+        clip-path: circle(40%);
+    }
+    .test-card p {
+        font-size: 15px;
+    }
+    .benefit-section {
+        margin-top: 10%;
+    }
+    .benefit-section h2:not(.benefit-card h2) {
+        padding: 5% 0;
+    }
+    .card-box {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .benefit-section .benefit-card {
+        width: calc(50% - 20px);
+        padding-bottom: 5%;
+        margin-bottom: 3%;
+    }
+    .benefit-section {
+        padding-bottom: 5%;
+    }
+    .about-us {
+        padding: 10% 0;
+        display: flex;
+    }
+    .about-left {
+        width: calc((100% / 3)* 2 - 20px);
+    }
+    .about-right {
+        width: calc(100% / 3 - 20px);
+        margin-left: 10%;
+    }
+    .about-us h2 {
+        font-size: 80px;
+        margin-bottom: 5%;
+    }
+    .about-us p {
+        font-size: 14px;
+    }
+    .about-us .photo {
+        width: 80%;
+        margin: 10% 0 5%;
+    }
+    .photo .fa-quote-left {
+        font-size: 46px;
+        right: -5%;
+    }
+    .about-us a {
+        padding: 5px 15px;
+    }
+    .get-started {
+        margin: 0;
+        padding-bottom: 5%;
+    }
+    .get-started h4 {
+        padding: 10% 0 3%;
+    }
+    .get-started h2 {
+        margin: 3% 0;
+    }
+    .get-started .copyright {
+        margin: 10% 0;
+    }
+    footer p {
+        padding: 10% 0;
+    }
+}
+
+
+@media screen and(min-width: 768px) {
+    
 }
