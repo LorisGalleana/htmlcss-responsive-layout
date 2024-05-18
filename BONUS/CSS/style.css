@@ -1,0 +1,807 @@
+/* 
+PALETTE:
+Azure: rgb(0, 132, 253)
+Uranian Blue: rgb(181, 221, 255)
+Tropical indigo: rgb(151, 146, 228)
+Melon: rgb(234, 164, 141)
+Payne's gray: rgb(90, 110, 127)
+Xanthous: rgb(253, 193, 95)
+Jet: rgb(51, 51, 51)
+*/
+:root {
+    --upper-bg-color: rgb(0, 132, 253);
+    --demo-color-card: rgb(181, 221, 255);
+    --secondary-color: rgb(151, 146, 228);
+    --width-container-limiter: 90%;
+    --width-container-limiter-desktop: 70%;
+    --center-margin: 0 auto;
+    font-size: 10px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+html {
+    scroll-behavior: smooth;
+}
+/***************************************************************************************** 
+                                     UPPER BAR   
+******************************************************************************************/
+.upper-bar {
+    background-color: var(--upper-bg-color);
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 2;
+}
+.upper-bar .container {
+    width: var(--width-container-limiter);
+    height: 100%;
+    margin: var(--center-margin);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.upper-bar .fa-bars {
+    color: white;
+    font-size: 36px;
+    z-index: 2;
+}
+
+.menu-nav {
+    display: none;
+    margin-right: 2%;
+}
+.menu-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    
+}
+.menu-nav ul a {
+    text-decoration: none;
+    color: white;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+}
+.start-button li {
+    background-color: white;
+    padding: 8px;
+    color: black;
+    border-radius: 32px;
+}
+/***************************************************************************************** 
+                                     DEMO SECTION   
+******************************************************************************************/
+.demo-section {
+    padding-top: 150px;
+    width: 100%;
+}
+.demo-section h2 {
+    font-size: 3.3rem;
+}
+.demo-section .container, .card-container, .planning-section .container, .testimonials, .text-card-container, .benefit-section .container, .benefit-card .container, .about-us, .get-started .container, footer .container {
+    width: var(--width-container-limiter);
+    margin: var(--center-margin);
+}
+
+.demo-section .card {
+    background-color: var(--demo-color-card);
+    margin-bottom: 20px;
+    border-radius: 24px;
+    text-align: center;    
+}
+.demo-section .card.big {
+    text-align: left;
+}
+.card h2 {
+    color: rgb(0, 132, 253);
+    font-weight: bold;
+    padding: 10% 0;
+}
+.card p {
+    color: rgb(90, 110, 127);
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 200%;
+    padding-bottom: 15%;
+}
+.card a {
+    text-decoration: none;
+    color: white;
+    background-color:rgb(0, 132, 253);
+    padding: 15px 85px;
+    border-radius: 36px;
+    font-weight: bold;
+    font-size: 1.8rem;
+    letter-spacing: 4px;  
+}
+.card .fa-apple {
+    padding-right: 2%;
+}
+.card .fa-solid {
+    font-size: 10rem;
+    color: rgb(0, 132, 253);
+    margin-top: 15%;
+}
+.card-container img {
+    width: var(--width-container-limiter);
+    vertical-align: bottom;
+    margin: 15% 5% 0;
+}
+/***************************************************************************************** 
+                                     PLANNING   
+******************************************************************************************/
+.planning-section, .benefit-section, .get-started {
+    width: 100%;
+    background-color: var(--secondary-color);
+    margin-top: 20%;
+    padding-bottom: 15%;
+}
+.planning-section img {
+    padding: 20% 0;
+    width: 100%;
+}
+.planning-section .container h2 {
+    color: white;
+    font-weight: bold;
+    padding-bottom: 15%;
+}
+.planning-section .container p {
+    color: white;
+    padding-bottom: 10%;
+    line-height: 180%;
+}
+.appdev-box {
+    width: var(--width-container-limiter);
+    margin: var(--center-margin);
+    background-color: white;
+    border-radius: 50px;
+    text-align: center;
+    
+}
+.appdev-box h2 {
+    font-weight: bold;
+    padding-bottom: 5%;
+}
+.appdev-box p {
+    font-style: italic;
+}
+.appdev-box .fa-arrow-down {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 100%;
+    margin: 10% 0;
+}
+.appdev-box img {
+    padding: 10% 0;
+    width: 100%;
+}
+
+/***************************************************************************************** 
+                                     TESTIMONIALS   
+******************************************************************************************/
+.testimonials {
+    text-align: center;
+}
+.testimonials h4 {
+    margin: 15% 0 5%;
+}
+.testimonials h2 {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 4rem;
+}
+.testimonials p {
+    margin: 10% 0%;
+    line-height: 180%;
+}
+.testimonials .test-card {
+    width: var(--width-container-limiter);
+    background-color:var(--secondary-color) ;
+    border-radius: 40px;
+    margin-bottom: 10%;
+}
+.test-card img {
+    margin: 10% 0 5%;
+    width: 100%;
+    clip-path: circle(39%);
+}
+.text-card-container {
+    filter: grayscale(1);
+}
+.text-card-container:hover {
+    filter: none;
+}
+.test-card p, .test-card .fa-solid, .test-card h4 {
+    color: white;
+}
+.test-card p {
+    margin: 5% 0%;
+}
+.test-card .fa-solid {
+    font-size: 2rem;
+    margin: 0 2%;
+}
+.test-card h4 {
+    font-weight: bold;
+    padding-bottom: 10%;
+    margin: 5% 0;
+}
+/***************************************************************************************** 
+                                     BENEFITS   
+******************************************************************************************/
+.benefit-section .benefit-card {
+    width: var(--width-container-limiter);
+    background-color: white;
+    color: var(--secondary-color);
+    border-radius: 20px;
+    margin: var(--center-margin);
+    padding-bottom: 10%;
+    margin-bottom: 10%;
+}
+.benefit-section h2:not(.benefit-card h2) {
+    text-align: center;
+    color: white;
+    font-size: 4rem;
+}
+.benefit-section h2 {
+    font-size: 5.2rem;
+    padding: 10% 0;
+    font-weight: bold;
+}
+.benefit-section h3 {
+    font-weight: bold;
+    font-size: 2.4rem;
+}
+.benefit-card p {
+    padding: 10% 0;
+    line-height: 180%;
+    color: gray;
+}
+.benefit-card .see-more {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 8px 46px;
+    text-align: center;
+    border-radius: 16px;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+/***************************************************************************************** 
+                                     ABOUT US   
+******************************************************************************************/
+.about-us {
+    padding: 20% 0;
+}
+.about-us h2 {
+    font-size: 4rem;
+    margin-bottom: 10%;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+.about-us h3 {
+    color: var(--secondary-color);
+    font-weight: bolder;
+    font-size: 3.6rem;
+    margin-bottom: 10%;
+}
+.about-us p {
+    line-height: 210%;
+    margin-bottom: 15%;
+    font-size: 2rem;
+}
+.about-us .photo {
+    width: 60%;
+    position: relative;
+    margin: 10% 0
+}
+.photo img {
+    width: 100%;
+    border-radius: 50%;
+}
+.photo .fa-quote-left {
+    position: absolute;
+    font-size: 6rem;
+    right: 6%;
+    color: var(--secondary-color);
+}
+.about-us a {
+    text-decoration: none;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 32px;
+    text-align: center;
+}
+a .fa-linkedin {
+    margin-right: 3%;
+}
+/***************************************************************************************** 
+                                     GET STARTED   
+******************************************************************************************/
+.get-started {
+    color: white;
+    text-align: center;
+}
+.get-started h4 {
+    color: lightgray;
+    font-size: 2.4rem;
+    padding: 10% 0 5%;
+    
+}
+.get-started h3 {
+    color: white;
+    font-size: 3.6rem;
+    font-weight: bold;
+}
+.get-started h2 {
+    color: rgb(253, 193, 95);
+    font-size: 8rem;
+    font-weight: bold;
+    margin: 10% 0;
+}
+.get-started p {
+    font-size: 2.1rem;
+    margin-bottom: 10%;
+}
+.get-started a:not(.copyright a) {
+    background-color: white;
+    color: var(--secondary-color);
+    padding: 20px 70px;
+    text-decoration: none;
+    margin: 10% 0;
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    border-radius: 40px;
+}
+.get-started .copyright {
+    font-size: 1.9rem;
+    margin: 15% 0;
+}
+.copyright a {
+    color: white;
+}
+.copyright .fa-circle {
+    font-size: 0.5rem;
+    vertical-align: middle;
+}
+
+/***************************************************************************************** 
+                                     FOOTER  
+******************************************************************************************/
+footer {
+    width: 100%;
+    background-color: rgb(51, 51, 51);
+    padding-bottom: 15%;
+}
+footer .container {
+    text-align: center;
+    color: white;
+}
+footer p {
+    padding: 10% 0 20%;
+}
+footer a {
+    color: var(--secondary-color);
+}
+
+
+/***************************************************************************************** 
+                                     LAYOUT  
+******************************************************************************************/
+@media screen and (min-width: 500px) {
+    .card-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .demo-section h2 {
+        font-size: 1.9rem;
+    }
+    .demo-section .container {
+        display:flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .demo-section .card {
+        width: calc(100%/3 - 20px);
+    }
+    .demo-section .card.big {
+        width: calc((100%/3)*2 - 20px);
+    }
+    .card h2 {
+        padding: 5% 0;
+    }
+    .card p {
+        padding-bottom: 5%;
+    }
+    .card a {
+        padding: 16px;
+        text-align: center;
+        width: 50%;
+    }
+    .card-container img {
+        width: 60%;
+        vertical-align: bottom;
+        margin: 5% 0 0;
+    }
+/***************************************************************************************** 
+                                     PLANNING   
+******************************************************************************************/
+    .planning-section {
+        margin-top: 5%;
+        padding-bottom: 5%;
+    }
+    .planning-section img {
+        padding: 10% 0;
+    }
+    .planning-section .container h2 {
+        padding-bottom: 5%;
+        font-size: 8rem;
+    }
+    .planning-section .container p {
+        padding-bottom: 3%;
+        font-size: 2rem;
+    }
+    .appdev-box img {
+        padding: 5% 0;
+        width: 70%;
+    }
+    .appdev-box p {
+        font-size: 2.4rem;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .appdev-box .fa-arrow-down {
+        margin: 5% 0;
+    }
+/***************************************************************************************** 
+                                     TESTIMONIALS   
+******************************************************************************************/
+    .testimonials .test-card {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 3%;
+    }
+    .text-card-container {
+        display: flex;
+        margin: 0;
+    }
+    .text-container {
+        text-align: left;
+    }
+    .test-card img {
+        margin: 3% -2% 6%;
+        width: 40%;
+        clip-path: circle(40%);
+    }
+    .test-card p {
+        font-size: 1.5rem;
+    }
+/***************************************************************************************** 
+                                     BENEFITS   
+******************************************************************************************/
+    .benefit-section {
+        margin-top: 10%;
+    }
+    .benefit-section h2:not(.benefit-card h2) {
+        padding: 5% 0;
+    }
+    .card-box {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .benefit-section .benefit-card {
+        width: calc(50% - 20px);
+        padding-bottom: 5%;
+        margin-bottom: 3%;
+    }
+    .benefit-section {
+        padding-bottom: 5%;
+    }
+/***************************************************************************************** 
+                                     ABOUT US   
+******************************************************************************************/
+    .about-us {
+        padding: 10% 0;
+        display: flex;
+    }
+    .about-left {
+        width: calc((100% / 3)* 2 - 20px);
+    }
+    .about-right {
+        width: calc(100% / 3 - 20px);
+        margin-left: 10%;
+    }
+    .about-us h2 {
+        font-size: 8rem;
+        margin-bottom: 5%;
+    }
+    .about-us p {
+        font-size: 1.4rem;
+    }
+    .about-us .photo {
+        width: 80%;
+        margin: 10% 0 5%;
+    }
+    .photo .fa-quote-left {
+        font-size: 4.6rem;
+        right: -5%;
+    }
+    .about-us a {
+        padding: 5px 15px;
+    }
+/***************************************************************************************** 
+                                     GET STARTED   
+******************************************************************************************/
+    .get-started {
+        margin: 0;
+        padding-bottom: 5%;
+    }
+    .get-started h4 {
+        padding: 10% 0 3%;
+    }
+    .get-started h2 {
+        margin: 3% 0;
+    }
+    .get-started .copyright {
+        margin: 10% 0;
+    }
+/***************************************************************************************** 
+                                     FOOTER  
+******************************************************************************************/
+    footer p {
+        padding: 10% 0;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .hamburger-menu {
+        display: none;
+    }
+    .menu-nav {
+        display: block;
+    }
+    .demo-section h2 {
+        font-size: 2.3rem;
+    }
+    .demo-text {
+        flex-direction: row;
+    }
+    .demo-section .card.big {
+        overflow: hidden;
+    }
+    .demo-text img {
+        width: 43%;
+        margin-left: 5%;
+        position: relative;
+        top: 34px;
+    }
+    .upper-bar .container, .demo-section .container {
+        width: var(--width-container-limiter-desktop);
+    }
+    .card p {
+        font-size: 1.6rem;
+        line-height: 180%;
+        padding-bottom: 10%;
+    }
+    .card a {
+        padding: 5px 40px;
+    }
+    .planning-box {
+        display: flex;
+        width: 70%;
+        margin: 0 auto;
+        gap: 20px;
+        padding-top: 5%;
+    }
+    .planning-section {
+        padding-bottom: 0%;
+    }
+    .planning-section .container h2 {
+        padding-bottom: 10%;
+        font-size: 3.5rem;
+    }
+    .planning-section .container p {
+        font-size: 1.6rem;
+    }
+    .planning-section img {
+        width: 70%;
+    }
+    .appdev-box {
+        width: 50%;
+        margin-top: 19%;
+        margin-bottom: 6%;
+    }
+    .testimonials {
+        width: 70%;
+    }
+    .testimonials h4 {
+        margin: 0 0 3%;
+    }
+    .testimonials h4:not(.text-container h4) {
+        margin-top: 5%;
+    }
+    .testimonials p {
+        margin: 4% 0% 2%;
+        font-size: 1.6rem;
+    }
+    .test-card img {
+        width: 24%;
+        object-fit: contain;
+        clip-path: circle(37%);
+        margin: 0;
+    }
+    .test-card h4 {
+        padding-bottom: 0%;
+    }
+    .benefit-section {
+        margin-top: 5%;
+        padding-bottom: 2%;
+    }
+    .benefit-section .container, .get-started .container {
+        width: 70%;
+    }
+    .benefit-section .benefit-card {
+        width: calc(100% / 3 - 20px);
+    }
+    .about-us {
+        width: 70%;
+        padding: 3% 0;
+    }
+    .photo .fa-quote-left {
+        font-size: 5.4rem;
+        right: 10%;
+    }
+    .get-started h4 {
+        padding: 5% 0 3%;
+    }
+    .get-started p {
+        font-size: 1.6rem;
+        margin-bottom: 5%;
+    }
+    .get-started .copyright {
+        margin: 5% 0;
+    }
+    .get-started {
+        padding-bottom: 1%;
+    }
+    footer {
+        padding-bottom: 5%;
+    }
+    footer .container {
+        width: 70%;
+    }
+    footer p {
+        padding: 5% 0 10%;
+    }
+   
+}
+
+@media screen and (max-width: 1100px) {
+    .menu-nav ul a li {
+        font-size: 1.4rem;
+    }
+    .card a {
+        padding: 5px 12px;
+    }
+    .card p {
+        font-size: 1.3rem;
+    }
+    .appdev-box h2 {
+        font-size: 2rem;
+        padding-bottom: 10%;
+    }
+    .appdev-box p {
+        font-size: 1.7rem;
+    }
+    .testimonials p {
+        font-size: 1.4rem;
+    }
+    .text-container p {
+        font-size: 1.3rem;
+    }
+    .text-container h4 {
+        font-size: 1.5rem;
+    }
+    .test-card img {
+        width: 30%;
+        clip-path: circle(34%);
+    }
+    .benefit-section h3 {
+        font-size: 1.5rem;
+    }
+    .benefit-card p {
+        line-height: 160%;
+        font-size: 1.3rem;
+    }
+    .photo .fa-quote-left {
+        right: -10%;
+    }
+    .about-us h3 {
+        font-size: 2.1rem;
+    }
+    .get-started p {
+        margin-bottom: 8%;
+    }
+    .get-started .copyright {
+        margin: 8% 0;
+    }
+    
+
+}
+
+@media screen and (min-width: 1101px) {
+    .menu-nav ul a li {
+        font-size: 1.8rem;
+    }   
+    .demo-section h2 {
+        font-size: 3rem;
+    }
+    .demo-text {
+        margin-bottom: 5%;
+    }
+    .card p {
+        font-size: 2rem;
+        line-height: 160%;
+    }
+    .planning-section .container h2 {
+        font-size: 4.5rem;
+    }
+    .planning-section .container p {
+        font-size: 1.9rem;
+    }
+    .appdev-box {
+        width: 50%;
+        margin-top: 23%;
+        margin-bottom: 4%;
+    }
+    .appdev-box h2 {
+        font-size: 2.5rem;
+    }
+    .appdev-box .fa-arrow-down {
+        margin: 5% 0;
+        font-size: 1.9rem;
+    }
+    .testimonials p {
+        margin: 4% 0% 2%;
+        font-size: 1.8rem;
+    }
+    .text-container p {
+        font-size: 1.3rem;
+    }
+    .text-container h4 {
+        font-size: 2rem;
+    }
+    .test-card img {
+        width: 28%;
+        clip-path: circle(37%);
+    }
+    .benefit-card p {
+        line-height: 170%;
+        font-size: 1.6rem;
+    }
+    .about-us p {
+        font-size: 1.8rem;
+    }
+    .about-us a {
+        font-size: 1.9rem;
+    }
+    .get-started p {
+        font-size: 2.4rem;
+        margin-bottom: 8%;
+    }
+    footer p {
+        font-size: 1.6rem;
+    }
+    footer .container {
+        font-size: 1.6rem;
+    }
+}
