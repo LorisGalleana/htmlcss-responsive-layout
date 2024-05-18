@@ -24,6 +24,9 @@ Jet: rgb(51, 51, 51)
     font-weight: 400;
     font-style: normal;
 }
+html {
+    scroll-behavior: smooth;
+}
 /***************************************************************************************** 
                                      UPPER BAR   
 ******************************************************************************************/
@@ -387,6 +390,9 @@ footer a {
         display: flex;
         flex-direction: column;
     }
+    .demo-section h2 {
+        font-size: 1.9rem;
+    }
     .demo-section .container {
         display:flex;
         flex-wrap: wrap;
@@ -398,7 +404,7 @@ footer a {
     .demo-section .card.big {
         width: calc((100%/3)*2 - 20px);
     }
-    .card h1 {
+    .card h2 {
         padding: 5% 0;
     }
     .card p {
@@ -424,20 +430,20 @@ footer a {
     .planning-section img {
         padding: 10% 0;
     }
-    .planning-section .container h1 {
+    .planning-section .container h2 {
         padding-bottom: 5%;
-        font-size: 80px;
+        font-size: 8rem;
     }
     .planning-section .container p {
         padding-bottom: 3%;
-        font-size: 20px;
+        font-size: 2rem;
     }
     .appdev-box img {
         padding: 5% 0;
         width: 70%;
     }
     .appdev-box p {
-        font-size: 24px;
+        font-size: 2.4rem;
         width: 90%;
         margin: 0 auto;
     }
@@ -465,7 +471,7 @@ footer a {
         clip-path: circle(40%);
     }
     .test-card p {
-        font-size: 15px;
+        font-size: 1.5rem;
     }
 /***************************************************************************************** 
                                      BENEFITS   
@@ -503,18 +509,18 @@ footer a {
         margin-left: 10%;
     }
     .about-us h2 {
-        font-size: 80px;
+        font-size: 8rem;
         margin-bottom: 5%;
     }
     .about-us p {
-        font-size: 14px;
+        font-size: 1.4rem;
     }
     .about-us .photo {
         width: 80%;
         margin: 10% 0 5%;
     }
     .photo .fa-quote-left {
-        font-size: 46px;
+        font-size: 4.6rem;
         right: -5%;
     }
     .about-us a {
@@ -552,6 +558,9 @@ footer a {
     .menu-nav {
         display: block;
     }
+    .demo-section h2 {
+        font-size: 2.3rem;
+    }
     .demo-text {
         flex-direction: row;
     }
@@ -568,7 +577,7 @@ footer a {
         width: var(--width-container-limiter-desktop);
     }
     .card p {
-        font-size: 16px;
+        font-size: 1.6rem;
         line-height: 180%;
         padding-bottom: 10%;
     }
@@ -585,12 +594,12 @@ footer a {
     .planning-section {
         padding-bottom: 0%;
     }
-    .planning-section .container h1 {
+    .planning-section .container h2 {
         padding-bottom: 10%;
-        font-size: 35px;
+        font-size: 3.5rem;
     }
     .planning-section .container p {
-        font-size: 16px;
+        font-size: 1.6rem;
     }
     .planning-section img {
         width: 70%;
@@ -611,7 +620,7 @@ footer a {
     }
     .testimonials p {
         margin: 4% 0% 2%;
-        font-size: 16px;
+        font-size: 1.6rem;
     }
     .test-card img {
         width: 24%;
@@ -637,14 +646,14 @@ footer a {
         padding: 3% 0;
     }
     .photo .fa-quote-left {
-        font-size: 54px;
+        font-size: 5.4rem;
         right: 10%;
     }
     .get-started h4 {
         padding: 5% 0 3%;
     }
     .get-started p {
-        font-size: 16px;
+        font-size: 1.6rem;
         margin-bottom: 5%;
     }
     .get-started .copyright {
